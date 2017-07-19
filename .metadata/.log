@@ -1,0 +1,105 @@
+!SESSION 2017-02-05 21:15:18.128 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -login -application com.aptana.commandline.launcher.LauncherApplication C:\Users\MACHENIKE\Desktop\demo\vue-demo\myDemo\webpack.config.js
+Command-line arguments:  -os win32 -ws win32 -arch x86 -login -data   -application com.aptana.commandline.launcher.LauncherApplication C:\Users\MACHENIKE\Desktop\demo\vue-demo\myDemo\webpack.config.js
+
+!ENTRY com.aptana.core 1 0 2017-02-05 21:15:19.407
+!MESSAGE (Build null) [INFO]  ide start check begin
+
+!ENTRY com.aptana.rcp 4 0 2017-02-05 21:15:19.415
+!MESSAGE (Build null) [ERROR]  getRawLocationURI: file:/C:/Users/MACHENIKE/Desktop/demo/vue-demo/myDemo
+
+!ENTRY com.aptana.rcp 4 0 2017-02-05 21:15:19.429
+!MESSAGE (Build null) [ERROR]  checkInstanceLocation
+
+!ENTRY com.pandora.core.utils 4 0 2017-02-05 21:15:19.452
+!MESSAGE (Build null) [ERROR]  remote-debugging-port == 52865
+
+!ENTRY com.aptana.rcp 4 0 2017-02-05 21:15:19.540
+!MESSAGE (Build null) [ERROR]  init CEF
+
+!ENTRY org.eclipse.ui 2 0 2017-02-05 21:15:19.574
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-05 21:15:19.574
+!MESSAGE Could not parse key sequence: plug-in='com.pandora.ui', id='org.eclipse.ui.edit.text.contentAssist.proposals', keySequence='Ctrl+Sapce'
+
+!ENTRY org.eclipse.ui 4 4 2017-02-05 21:15:20.111
+!MESSAGE Unable to create menu item "org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction", command "org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction" not defined
+
+!ENTRY com.aptana.scripting 4 0 2017-02-05 21:15:21.726
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'Build–in constant' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.scripting 4 0 2017-02-05 21:15:21.731
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'library class/type' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.rcp 4 0 2017-02-05 21:15:22.599
+!MESSAGE (Build null) [ERROR]  ---------------------start check----------------------
+
+!ENTRY com.aptana.rcp 4 0 2017-02-05 21:15:22.603
+!MESSAGE check mode
+
+!ENTRY com.aptana.commandline.launcher 4 0 2017-02-05 22:24:31.207
+!MESSAGE Stream closed
+!STACK 0
+java.io.IOException: Stream closed
+	at java.io.BufferedReader.ensureOpen(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at java.io.BufferedReader.readLine(Unknown Source)
+	at com.aptana.commandline.launcher.server.LauncherServer$CommandLineArgsServer.run(LauncherServer.java:133)
+
+!ENTRY com.aptana.rcp 4 0 2017-02-05 22:24:33.135
+!MESSAGE (Build null) [ERROR]  null
+!STACK 0
+java.lang.Exception
+	at com.aptana.rcp.SystemUtils.exit(SystemUtils.java:8)
+	at com.aptana.rcp.ReadyFileUtils$CheckFileTask.run(ReadyFileUtils.java:112)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+!SESSION 2017-02-20 14:42:13.367 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -login -application com.aptana.commandline.launcher.LauncherApplication C:\Users\MACHENIKE\Desktop\demo\vue-demo\myDemo\index.html
+Command-line arguments:  -os win32 -ws win32 -arch x86 -login -data   -application com.aptana.commandline.launcher.LauncherApplication C:\Users\MACHENIKE\Desktop\demo\vue-demo\myDemo\index.html
+
+!ENTRY com.aptana.core 1 0 2017-02-20 14:42:14.837
+!MESSAGE (Build null) [INFO]  ide start check begin
+
+!ENTRY com.aptana.rcp 4 0 2017-02-20 14:42:14.846
+!MESSAGE (Build null) [ERROR]  getRawLocationURI: file:/C:/Users/MACHENIKE/Desktop/demo/vue-demo/myDemo
+
+!ENTRY com.aptana.rcp 4 0 2017-02-20 14:42:14.873
+!MESSAGE (Build null) [ERROR]  checkInstanceLocation
+
+!ENTRY com.pandora.core.utils 4 0 2017-02-20 14:42:14.902
+!MESSAGE (Build null) [ERROR]  remote-debugging-port == 57160
+
+!ENTRY com.aptana.rcp 4 0 2017-02-20 14:42:15.095
+!MESSAGE (Build null) [ERROR]  init CEF
+
+!ENTRY org.eclipse.ui 2 0 2017-02-20 14:42:15.430
+!MESSAGE Warnings while parsing the key bindings from the 'org.eclipse.ui.commands' extension point
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-02-20 14:42:15.430
+!MESSAGE Could not parse key sequence: plug-in='com.pandora.ui', id='org.eclipse.ui.edit.text.contentAssist.proposals', keySequence='Ctrl+Sapce'
+
+!ENTRY com.aptana.rcp 4 0 2017-02-20 14:42:16.266
+!MESSAGE (Build null) [ERROR]  ********HBuilder正常启动：preStartup********
+
+!ENTRY org.eclipse.ui 4 4 2017-02-20 14:42:17.557
+!MESSAGE Unable to create menu item "org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction", command "org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction" not defined
+
+!ENTRY com.aptana.scripting 4 0 2017-02-20 14:42:21.837
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'Build–in constant' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.scripting 4 0 2017-02-20 14:42:21.840
+!MESSAGE (Build null) [ERROR]  An error occurred while parsing scope 'library class/type' : Cannot recover from the syntax error
+
+!ENTRY com.aptana.rcp 4 0 2017-02-20 14:42:22.565
+!MESSAGE (Build null) [ERROR]  ---------------------start check----------------------
+
+!ENTRY com.aptana.rcp 4 0 2017-02-20 14:42:22.570
+!MESSAGE check mode
