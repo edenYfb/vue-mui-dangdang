@@ -3,7 +3,7 @@
 		<!--左边-->
 		<div class="mui-col-xs-3">
 			<div  id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
-				<a :class="{'mui-control-item':true, 'mui-active':!itemIndex}" :href="'#'+itemIndex" v-for="(item, itemIndex) in datas" :key='itemIndex'>{{item.name}}</a>
+				<span :class="{'mui-control-item':true, 'mui-active':!itemIndex}" :href="'#'+itemIndex" v-for="(item, itemIndex) in datas" :key='itemIndex'>{{item.name}}</span>
 			</div>
 		</div>
 		<!--右边-->

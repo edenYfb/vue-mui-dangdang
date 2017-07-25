@@ -165,14 +165,16 @@ export default{
 		}
 	}
 	.title{
+		text-align: center;
 		a{
 			color:#000;
 		}
-		.titleItem{
+		/*.titleItem{
 			width: 100%;
 			text-align: center;
 			line-height: 45px;
-		}
+
+		}*/
 	}
 }
 

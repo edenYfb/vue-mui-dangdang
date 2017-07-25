@@ -23,7 +23,7 @@ export default{
 	},
 	methods:{
 		backHome(){
-			mui( '#app' ).offCanvas( 'close' );
+			mui("#aside").offCanvas( 'close' );
 			asideSearchInput.value = '';
 		}
 	},

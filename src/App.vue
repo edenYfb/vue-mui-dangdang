@@ -1,5 +1,5 @@
 <template>
-	<div class="mui-off-canvas-wrap mui-draggable" id='app'>
+	<div class="mui-off-canvas-wrap mui-draggable" id='app0'>
 	  <!-- 主页面容器 -->
 	  <div class="mui-inner-wrap mui-transitioning">
 	    <!-- 菜单容器 -->
@@ -26,7 +26,7 @@ import footerComponent from './components/footer/Footer.vue';
 import asideComponent from './components/aside/Aside.vue';
 
 export default {
-  name: 'app',
+  name: 'app0',
   mounted(){
   	var _this = this;
 	//刷新
@@ -47,11 +47,17 @@ export default {
   methods: {
 		pullFresh(){
 			var _this = this;
-			setTimeout(()=>{
-				alert('加载完成');
-				console.log(111, mui('#main').pullRefresh())
-				mui('#main').pullRefresh().endPulldownToRefresh();
-			},1000);
+			switch(this.$route.path){
+				case '/home':
+					setTimeout(()=>{
+						alert('加载完成');
+						mui('#main').pullRefresh().endPulldownToRefresh();
+					},1000);
+				break;
+				default:
+					mui('#main').pullRefresh().endPulldownToRefresh();
+				break;
+			}
 		}
   },
   //各个组件的watch地址改变集中在app里

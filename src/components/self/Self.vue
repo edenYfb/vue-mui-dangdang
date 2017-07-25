@@ -23,8 +23,10 @@
 		<div class="list">
 			<ul class="mui-table-view">
 			    <li class="mui-table-view-cell" v-for="(listItem, listIndex) in datas.list" :key="listIndex">
-			    	<img class="mui-pull-left" :src="listItem.img"/>
-			        <a class="mui-navigate-right mui-pull-left">{{listItem.title}}</a>
+			        <a class="mui-navigate-right mui-pull-left">
+			        	<img class="mui-pull-left" :src="listItem.img"/>
+			        	{{listItem.title}}
+			        </a>
 			    </li>
 			</ul>
 		</div>
@@ -68,7 +70,6 @@ export default {
 		position: relative;
 		.login {
 			height: 90px;
-			
 			padding-top: 34px;
 			.loginBtn {
 				height: 32px;
@@ -79,6 +80,7 @@ export default {
 				border-radius:5px;
 				margin: 0 auto;
 				color: #fff;
+				text-align: center;
 			}
 		}
 		.message {
@@ -122,15 +124,27 @@ export default {
 			&>li{
 				text-align: left;
 				padding-right: 0px;
-				padding-top:20px;
-					img{
-						width:22px;
-					}
+				padding-left: 0px;
+				/*padding-top:20px;*/
 				.mui-navigate-right{
 					margin: 0px;
 					padding: 0px;
-					width: 92%;
+					height: 40px;
+					line-height: 40px;
+					width: 100%;
 					float: right;
+					&>img{
+						padding-top: 10px;
+						padding-right: 10px;
+						padding-left: 10px;
+						width: 40px;
+					}
+				}
+				&::after {
+					left:0;
+				}
+				&:last-child::after{
+					height:0
 				}
 			}
 		}
