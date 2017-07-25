@@ -42,6 +42,7 @@ export default{
 			datas: homeDatas
 		}
 	},
+	methods: {},
 	components:{
 		lunboComponent,
 		btnimagesComponent,
@@ -54,5 +55,6 @@ export default{
 <style lang="less">
 #home {
 	padding-bottom: 50px;
+
 }
 </style>

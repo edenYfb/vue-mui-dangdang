@@ -8,11 +8,11 @@
 	    <header-component ref="header"></header-component>
 	    <!-- 主页面内容 -->
 	    <div class="mui-content mui-scroll-wrapper" id="main">
-        	<!--<transition name='fade'>-->
+        	<transition name='fade'>
 	        	<keep-alive>
 	        		<router-view name="main"></router-view>
 	        	</keep-alive>
-        	<!--</transition>-->
+        	</transition>
 	    </div>  
 	   	<!-- 主页面底部 -->
 	    <footer-component ref="footer"></footer-component>
@@ -28,20 +28,31 @@ import asideComponent from './components/aside/Aside.vue';
 export default {
   name: 'app',
   mounted(){
-	//禁止手动侧滑
-	document.querySelector('.mui-inner-wrap').addEventListener('drag', function(event) {
-	    event.stopPropagation();
+  	var _this = this;
+	//刷新
+	mui.init({
+		swipeBack:true,//不允许侧滑
+		pullRefresh : {
+		    container:"#main",
+		    down: {
+		    	height:80,
+			    contentrefresh: "正在刷新...",
+			    callback: _this.pullFresh
+			}
+		}
 	});
-  	//允许滚动
-	mui('.mui-scroll-wrapper').scroll({
-		 scrollY: true, //是否竖向滚动
-		 scrollX: false, //是否横向滚动
-		 startX: 0, //初始化时滚动至x
-		 startY: 0, //初始化时滚动至y
-		 indicators: true, //是否显示滚动条
-		 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
-		 bounce: true //是否启用回弹
-	});
+	//滚动
+	mui('.mui-scroll-wrapper').scroll();
+  },
+  methods: {
+		pullFresh(){
+			var _this = this;
+			setTimeout(()=>{
+				alert('加载完成');
+				console.log(111, mui('#main').pullRefresh())
+				mui('#main').pullRefresh().endPulldownToRefresh();
+			},1000);
+		}
   },
   //各个组件的watch地址改变集中在app里
   watch: {
@@ -57,23 +68,27 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="less">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#main {
-}
-.mui-off-canvas-left, .mui-off-canvas-right{
-  width: 100% !important;
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+	color: #2c3e50;
+	&>.mui-inner-wrap{
+		&>#main{
+			&>.mui-pull-top-pocket.mui-block{
+				top:30px;
+			}
+			/*&>.fade-enter-active,
+			&>.fade-leave-active {
+			  transition: opacity .5s
+			}
+			&>.fade-enter,
+			&>.fade-leave-active {
+			  opacity: 0
+			}*/
+		}
+	}
 }
 </style>

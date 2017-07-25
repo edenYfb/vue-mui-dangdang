@@ -16,6 +16,7 @@ import content_zhutiguan from './Home_lanmu_content_zhutiguan.vue'
 import content_shangou from './Home_lanmu_content_shangou.vue'
 
 export default{
+	name: 'homeLanmu',
 	props:['lanmudatas'],
 	data(){
 		return{

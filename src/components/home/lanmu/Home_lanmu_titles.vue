@@ -15,7 +15,7 @@
 
 <script>
 export default{
-	name:'lanmu_title',
+	name:'lanmuTitle',
 	props:['title']
 }
 </script>

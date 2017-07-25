@@ -33,6 +33,10 @@ export default{
 </script>
 <style lang="less">
 #aside{
+	&.mui-off-canvas-left,
+	&.mui-off-canvas-right{
+		width: 100%;
+	}
 	.mui-scroll-wrapper{
 		.mui-scroll{
 			.mui-bar{

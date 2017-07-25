@@ -41,75 +41,81 @@
 
 <script>
 export default{
+	name: 'lanmucontentShangou',
 	props:['content']
 }
 </script>
 
-<style scoped>
-.lanmucontent_shangou a{
-	display: block;
-	width:100%;
-}
-.top{
-	overflow: hidden;
-}
-.top>.top0{
-	width:50%;
-	display: inline-block;
-	float:left;
-}
-.top>.top0 img{
-	width:100%;
-}
-.top>.top1{
-	width:50%;
-	display: inline-block;
-	float: left;
-	padding-top:10px;
-}
-.top>.top1>a>img{
-	width:45%;
-	float:right
-}
-.top>.top1>a>div{
-	display: inline-block;
-	width:55%;
-	float:left;
-	padding-top: 20%;
-}
-.top>.top1>a>div>p{
-margin-bottom:5px;
-}
-.top>.top1 .title{
-	font-size:14px;
-	font-weight: 800;
-	color:#000
-}
-.top>.top1 .tip0{
-	font-size:13px;
-}
-.bottom{
-	width:100%;
-}
-.bottom>.items{
-	width:33.33%;
-	display:inline-block;
-	float:left;
-}
-.bottom>.items>a>img{
-	max-width:100%;	
-}
-.bottom>.items>a>div{
-	padding-top:10px;
-	background-color:#fff;
-}
-.bottom .title{
-	font-size:15px;
-	color:#000;
-	font-weight:800;
-	margin-bottom: 0;
-}
-.bottom .tip0{
-	margin-bottom:0
+<style lang="less">
+#lanmucontent_shangou{
+	.top{
+		overflow: hidden;
+		.top0{
+			width:50%;
+			display: inline-block;
+			float:left;
+			& img{
+				width:100%;
+			}
+		}
+		.top1{
+			width:50%;
+			display: inline-block;
+			float: left;
+			padding-top:10px;
+			&{
+				a{
+					&>img{
+						width:45%;
+						float:right
+					}
+					&>div{
+						display: inline-block;
+						width:55%;
+						float:left;
+						padding-top: 20%;
+						&>p{
+							margin-bottom:5px;
+						}
+						.title{
+							font-size:14px;
+							font-weight: 800;
+							color:#000
+						}
+						.tip0{
+							font-size:13px;
+						}
+						.tip1{}
+					}
+				}
+			}
+		}
+	}
+	.bottom{
+		width:100%;
+		&>.items{
+			width:33.33%;
+			display:inline-block;
+			float:left;
+			&>a{
+				&>img{
+					max-width:100%;	
+				}
+				&>div{
+					padding-top:10px;
+					background-color:#fff;
+					&>.title{
+						font-size:15px;
+						color:#000;
+						font-weight:800;
+						margin-bottom: 0;
+					}
+					&>.tip0{
+						margin-bottom:0
+					}
+				}
+			}
+		}
+	}
 }
 </style>

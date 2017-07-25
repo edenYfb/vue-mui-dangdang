@@ -125,8 +125,6 @@ export default {
 				padding-top:20px;
 					img{
 						width:22px;
-						/*margin-top:10px;
-						margin-right:10px;*/
 					}
 				.mui-navigate-right{
 					margin: 0px;

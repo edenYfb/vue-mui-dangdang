@@ -2,6 +2,7 @@
 <div id="header" v-show="navShow">
 	<!--search类型-->
 	<div class="search mui-bar" v-show="navType=='search'">
+	<!--<div class="search mui-bar" v-show="!!0">-->
 		<!--左侧图标-->
 		<barLeftIcon-component ref="barLeftIcon"></barlefticon-component>
 		<!--中间搜索-->
@@ -17,7 +18,8 @@
 	</div>
 	<!--title类型-->
 	<div class="title mui-bar mui-bar-nav" v-show="navType=='title'">
-		<h1 class="mui-title">{{navTitle}}</h1>
+		<h1 class="mui-title" v-show="navTitleImg.length==0">{{navTitle}}</h1>
+		<img v-show="!(navTitleImg.length==0)" :src="navTitleImg" height="100%"/>
 		<a v-show="navIconLeft" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 	</div>
 </div>
@@ -37,7 +39,8 @@ export default{
 			navTitle: String,	//如果是标题类型，标题名,
 			//细节调整
 			long: Boolean,	//search类型的宽度
-			navIconLeft: true
+			navIconLeft: true,	//左侧图标显示隐藏
+			navTitleImg: ''	//title类型nav，用图片代替文字
 		}
 	},
 	computed:{
@@ -69,22 +72,28 @@ export default{
 					break;
 				//title类型nav
 				case '/discover':
-				    this.navShow = true, this.navType = 'title', this.navTitle = '发现', this.navIconLeft = false;
+				    this.navShow = true, this.navType = 'title', this.navTitle = '发现', this.navIconLeft = false,
+				    this.navTitleImg = '../../../assets/image/2017/7/discoverTitle.png';
 				    break;
 				case '/buy':
-				    this.navShow = true, this.navType = 'title', this.navTitle = '购物车', this.navIconLeft = false;
+				    this.navShow = true, this.navType = 'title', this.navTitle = '购物车', this.navIconLeft = false,
+				    this.navTitleImg = '';
 				    break;
 				case '/login':
-		  			this.navShow = true, this.navType = 'title', this.navTitle = '登录', this.navIconLeft = false;
+		  			this.navShow = true, this.navType = 'title', this.navTitle = '登录', this.navIconLeft = false,
+		  			this.navTitleImg = '';
 		  			break;
 		  		case '/register':
-		  			this.navShow = true, this.navType = 'title', this.navTitle = '注册', this.navIconLeft = true;
+		  			this.navShow = true, this.navType = 'title', this.navTitle = '注册', this.navIconLeft = true,
+		  			this.navTitleImg = '';
 		  			break;
 		  		case '/forget':
-		  			this.navShow = true, this.navType = 'title', this.navTitle = '忘记密码', this.navIconLeft = true;
+		  			this.navShow = true, this.navType = 'title', this.navTitle = '忘记密码', this.navIconLeft = true,
+		  			this.navTitleImg = '';
 					break;
 		  		case '/message':
-		  			this.navShow = true, this.navType = 'title', this.navTitle = '消息中心', this.navIconLeft = false;
+		  			this.navShow = true, this.navType = 'title', this.navTitle = '消息中心', this.navIconLeft = false,
+		  			this.navTitleImg = '';
 					break;
 				default:
 					this.navShow = false;

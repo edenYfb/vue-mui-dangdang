@@ -12,33 +12,37 @@
 
 <script>
 export default{
+	name: 'lanmucontentMiaosha',
 	props:['content']
 }
 </script>
 
-<style scoped>
-.lanmucontent_miaosha{
+<style lang="less">
+#lanmucontent_miaosha{
 	width:100%;
 	float:left;
-	padding:0 0 0 2%
+	padding:0 0 0 2%;
+	&>.item{
+		width:30%;
+		display:inline-block;
+		float:left;
+		&:nth-child(1),
+		&:nth-child(2){
+			margin-right:4%;
+		}
+		&>div{
+			&>a{
+				display:block;
+				width:100%;
+				&>img{
+					max-width:100%
+				}
+			}
+		}
+	}
+	.content_text{
+		color:red;
+	}
 }
-.lanmucontent_miaosha>.item{
-	width:30%;
-	display:inline-block;
-	float:left;
-}
-.lanmucontent_miaosha>.item:nth-child(1),
-.lanmucontent_miaosha>.item:nth-child(2){
-	margin-right:4%;
-}
-.lanmucontent_miaosha>.item>div>a{
-	display:block;
-	width:100%;
-}
-.lanmucontent_miaosha>.item>div>a>img{
-	max-width:100%
-}
-.content_text{
-	color:red;
-}
+
 </style>

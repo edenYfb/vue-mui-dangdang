@@ -14,6 +14,7 @@
 
 <script>
 export default{
+	name: 'homeZhutiguan',
 	props:['content']
 }
 </script>
